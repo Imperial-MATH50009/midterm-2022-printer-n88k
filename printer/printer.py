@@ -11,7 +11,7 @@ class Document:
 
     def print(self):
         return self.queue.popleft()
-    
+
     def __len__(self):
         return len(self.queue)
 
@@ -19,7 +19,7 @@ class Document:
 class Printer:
     def __init__(self):
         self.queue = deque()
-    
+
     def enqueue(self, doc):
         self.queue.append(doc)
 
@@ -33,7 +33,7 @@ class Printer:
         return sum([len(doc) for doc in self.queue])
 
     def print(self):
-        first_doc= self.queue[0]
+        first_doc = self.queue[0]
         page = first_doc.print()
         if not first_doc:
             self.queue.popleft()
