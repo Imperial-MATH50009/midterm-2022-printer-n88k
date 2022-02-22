@@ -3,9 +3,9 @@ from collections import deque
 
 
 class Document:
-    def __init__(self, strings=()):
-        self.queue=deque(strings)
+    def __init__(self, strings=(,)):
+        self.queue = deque(strings)
     
-    def append(self,string):
+    def append(self, string):
         self.queue.append()
 
